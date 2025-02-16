@@ -1,9 +1,11 @@
 import ListarItemApi from "@/components/ListarItemApi";
 
-interface CountryParams {
-  country: string;
+interface CountryPageProps {
+  params: {
+    country: string;
+  };
 }
 
-export default function Country({ params }: { params: CountryParams }) {
+export default function Country({ params }: CountryPageProps) {
   return <ListarItemApi key="item01" name={params.country} />;
 }

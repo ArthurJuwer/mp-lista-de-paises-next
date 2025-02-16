@@ -33,7 +33,7 @@ export default async function ListarApi() {
     <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 xl:gap-12 place-items-center">
         {initialCountries.map((item, index) => (
             <Link href={`/info/${item.cca3}`}>
-            <div key={index} className="flex flex-col items-center justify-center gap-y-4">  
+            <div key={'listarapi'+index} className="flex flex-col items-center justify-center gap-y-4">  
                 <Image className="rounded-2xl" src={item.flags.png} width={180} height={100} alt="flag" />
                 <h1 className="text-center">{item.translations.por.common || 'Nome não Disponivel'}</h1>
             </div>
